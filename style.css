@@ -657,3 +657,260 @@ a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/* ============================================================
+   АДАПТИВНОСТЬ (мобильные устройства)
+   Добавлено ниже, ничего из исходного кода не изменено.
+   ============================================================ */
+
+/* Защита от горизонтальной прокрутки и картинок шире контейнера */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* Отступ при клике по якорным ссылкам, чтобы блок не прятался под фиксированным header */
+section {
+    scroll-margin-top: 130px;
+}
+
+/* ---------- Планшеты и телефоны (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    header {
+        padding-bottom: 10px;
+    }
+
+    .header_wpapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header_logo {
+        margin-top: 15px;
+    }
+
+    .header_logo h1 {
+        font-size: 32px;
+    }
+
+    .header_menu {
+        margin-left: 0;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    a {
+        padding-left: 0;
+        padding: 0 10px;
+    }
+
+    section {
+        scroll-margin-top: 110px;
+    }
+
+    /* INTRO */
+    .intro {
+        padding-top: 170px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro_left {
+        width: 220px;
+        padding-top: 0;
+    }
+
+    .intro_right {
+        margin-left: 0;
+        margin-bottom: 60px;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    .intro_title {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    /* ABOUT */
+    .about_block {
+        width: 100%;
+    }
+
+    .about_title {
+        margin-top: 60px;
+        font-size: 26px;
+    }
+
+    .about_text {
+        margin-bottom: 60px;
+    }
+
+    /* PROJECTS */
+    .projects_block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .projects_icon {
+        width: 60px;
+    }
+
+    /* SKILLS */
+    .skills_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills_left {
+        width: 100%;
+        max-width: 445px;
+        margin-right: 0;
+    }
+
+    .skills_title {
+        margin-top: 60px;
+        font-size: 26px;
+    }
+
+    .skill_1::before,
+    .skill_2::before,
+    .skill_3::before {
+        width: 100%;
+    }
+
+    .skill_1::after { width: 74%; }
+    .skill_2::after { width: 52%; }
+    .skill_3::after { width: 100%; }
+
+    .skills_img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* PROCESS */
+    .process_block {
+        width: 100%;
+    }
+
+    .process_title {
+        margin-top: 60px;
+        font-size: 26px;
+    }
+
+    .process_text {
+        margin-bottom: 50px;
+    }
+
+    .video_block {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .process_video {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    /* SEND */
+    .send_title {
+        margin-top: 60px;
+        font-size: 26px;
+    }
+
+    .send_text {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .send_form {
+        width: 100%;
+    }
+
+    .send_form > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form1,
+    .form2 {
+        width: 100%;
+        max-width: 540px;
+        margin-right: 0;
+    }
+
+    .form3 {
+        width: 100%;
+        max-width: 540px;
+    }
+
+    .send_button {
+        margin-bottom: 60px;
+    }
+
+    #successMessage {
+        padding: 0 20px;
+    }
+}
+
+/* ---------- Маленькие телефоны (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    .intro_title {
+        font-size: 26px;
+    }
+
+    .header_menu {
+        font-size: 12px;
+    }
+
+    a {
+        padding: 0 6px;
+    }
+
+    .intro_left {
+        width: 160px;
+    }
+
+    .projects_icon {
+        width: 45px;
+    }
+
+    .video_block {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about_text,
+    .process_text,
+    .send_text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
