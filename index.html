@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
     <title>Сайт-визитка</title>
+    <script src="jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -104,6 +105,47 @@
         </div>
     </section>
 
+    <section>
+        <div class="gallery">
+            <div class="gallery_str">
+            <a href="gallery1.png" class="lightzoom">
+                <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+            </a>
+                
+            <a href="gallery2.png" class="lightzoom">
+                <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+            </a>
+
+            <a href="gallery1.png" class="lightzoom">
+                <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+            </a>
+                
+            <a href="gallery2.png" class="lightzoom">
+                <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+            </a>
+            
+            </div>
+
+            <div class="gallery_str">
+            <a href="gallery2.png" class="lightzoom">
+                <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+            </a>
+
+            <a href="gallery1.png" class="lightzoom">
+                <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+            </a>
+
+            <a href="gallery2.png" class="lightzoom">
+                <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+            </a>
+
+            <a href="gallery1.png" class="lightzoom">
+                <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+            </a>
+            </div>
+        </div>
+    </section>
+
     <section class="send" id="send">
         <div class="wrapper">
             <div class="send_wrapper">
@@ -123,7 +165,7 @@
                         <button type="submit" class="send_button" id="submitBtn">ОТПРАВИТЬ</button>
                     </div>
                 </form>
-                
+
                 <div id="successMessage" style="display: none; text-align: center; margin-bottom: 101px;">
                     <h2 style="font-family: Roboto; font-size: 28px; color: #34547a; margin-bottom: 15px;">Спасибо за заказ!</h2>
                     <p style="font-family: Roboto; font-size: 18px; color: #727272;">В скором времени я с вами свяжусь.</p>
@@ -133,35 +175,10 @@
         </div>
     </section>
 </main>
-
-<script>
-    document.getElementById('myForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        
-        var form = this;
-        var btn = document.getElementById('submitBtn');
-        var successDiv = document.getElementById('successMessage');
-        
-        btn.textContent = 'ОТПРАВКА...'; 
-        btn.disabled = true; 
-
-        var formData = new FormData(form);
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            form.style.display = 'none';
-            successDiv.style.display = 'block';
-        })
-        .catch(error => {
-            alert('Ошибка сети. Проверьте интернет и попробуйте снова.');
-            btn.textContent = 'ОТПРАВИТЬ';
-            btn.disabled = false;
-        });
-    });
-</script>
+    <link rel="stylesheet" href="lightzoom/style.css">
+    <script src="lightzoom/lightzoom.js"></script>
+    <script>jQuery('.lightzoom').lightzoom({speed: 400, viewTitle:true, isOverlayClickClosing:true, isWindowClickClosing:true, isEscClosing:true});</script>
+    <script src="script.js"></script>
 
 </body>
 </html>

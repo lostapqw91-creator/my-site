@@ -301,7 +301,7 @@ body {
     margin-top: 79px;
 }
 
-a {
+.header_menu a {
     padding-left: 38px;
     text-decoration: none;
     color: inherit;
@@ -913,4 +913,22 @@ section {
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery_str {
+    display: flex;
+    width: 100%;
+}
+
+.gallery_img {
+    width: 100%;
+}
+
+.lightzoom {
+    width: 25%;
 }
